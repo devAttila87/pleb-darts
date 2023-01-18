@@ -1,2 +1,9 @@
-# pleb-darts
- Spring Boot 501 Darts Counter for two participants
+# Pleb Darts
+
+Spring Boot Application for a 501 Darts game with two participants based on REST and WebSockets.
+
+### Contents
+Lorem Ipsum
+
+* [Lorem Ipsum](https://spring.io)
+
