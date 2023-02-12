@@ -1,13 +1,14 @@
 package de.leidenheit.plebdarts.service;
 
 import de.leidenheit.plebdarts.exception.CheckoutPathNotFoundException;
-import de.leidenheit.plebdarts.resource.entity.game.CheckoutPath;
 import de.leidenheit.plebdarts.repository.CheckoutRepository;
+import de.leidenheit.plebdarts.resource.entity.game.CheckoutPath;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
+import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.jupiter.MockitoExtension;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
@@ -16,17 +17,17 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-@SpringBootTest
+@ExtendWith(MockitoExtension.class)
 class CheckoutPathServiceTest {
 
-    @MockBean
+    @Mock
     private CheckoutRepository mockCheckoutRepository;
-    @Autowired
+
+    @InjectMocks
     private CheckoutService underTest;
 
     private static final String CHECKOUT_PATH_100 = "T20 D20";
     private static final String CHECKOUT_PATH_170 = "T20 T20 Bullseye";
-
     private static final String ERR_MSG_INVALID_SCORE_4711 = "Could not find any checkout path for score 4711";
 
     @Test

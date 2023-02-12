@@ -1,6 +1,5 @@
 package de.leidenheit.plebdarts.resource.entity.game;
 
-
 import de.leidenheit.plebdarts.resource.entity.player.Player;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -11,15 +10,19 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
+@Getter
+@Setter
 @Builder(setterPrefix = "set")
-@Entity
 public class Game implements Playable {
 
     @Id

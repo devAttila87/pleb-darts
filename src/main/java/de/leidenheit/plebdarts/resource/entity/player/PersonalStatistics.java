@@ -11,10 +11,10 @@ import lombok.NoArgsConstructor;
 @Embeddable
 public class PersonalStatistics {
 
-    protected int gamesPlayed;
-    protected int gamesWon;
-    protected int countOf180s;
-    protected int thrownDarts;
-    protected double avgPerDart;
-    protected double avgPerLeg;
+    private int gamesPlayed;
+    private int gamesWon;
+    private int countOf180s;
+    private int thrownDarts;
+    private double avgPerDart;
+    private double avgPerLeg;
 }
